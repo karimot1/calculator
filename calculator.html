@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      *{
+         margin:0;
+         padding:0;
+      }
+      body{
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+      .mamat{
+         width:300px;
+         height:200px;
+         background-color:#f4f2ee;
+         border:1px solid rgba(128, 128, 128, 0.151);
+      }
+      input{
+         width:250px;
+         height:30px;
+         border-radius:7px;
+         border:1px solid #0a66c2;
+         margin-top:10px;
+         margin-left:20px;
+         background-color:transparent;
+         text-align: right;
+          color:#191919;
+         font-size:25px;
+         font-weight: 700;
+         font-family: 'Courier New', Courier, monospace;
+      }
+      input:focus{
+         outline:#0a66c2;
+      }
+       input:focus-within{
+         box-shadow:3px 3px 3px #19191952;
+       }
+      button{
+         margin-top:20px;
+         width:70px;
+         height:30px;
+         background-color:#0a66c2;
+         color:white;
+         border:0;
+         font-size:16px;
+         font-weight:600;
+      }
+      button:hover{
+         background-color:RGB(40 51 146);
+      }
+      button:focus-within{
+        box-shadow:3px 3px 2px rgba(0, 0, 0, 0.342);
+      }
+      #kaka{
+         color:#191919;
+         font-size:25px;
+         font-weight: 700;
+         font-family: 'Courier New', Courier, monospace;
+         text-align: center;
+         margin-top:5px;
+      }
+      .div:hover{
+         border:1px solid darkblue;
+      }
+      input:hover{
+         border:1px solid darkblue;
+      }
+      .div{
+         width:200px;
+         height:40px;
+          border-radius:7px;
+         border:1px solid #0a66c2;
+         margin-top:10px;
+         margin-left:40px;
+         background-color:transparent;
+         overflow-x: scroll;
+         box-shadow:3px 3px 2px 3px rgba(0, 0, 0, 0.342);
+      }
+      .div::-webkit-scrollbar{
+         background-color:transparent;
+         width:5px;
+         height:3px;
+      }
+      .div::-webkit-scrollbar-thumb{
+         background-color:blue;
+         border-radius:20px;
+      }
+    </style>
+</head>
+<body>
+   <div class="mamat">
+    <input id="kenn" type="text">
+    <input id="yap" type="text">
+    <div class="div">
+    <p id="kaka"></p>
+    </div>
+    <button onclick="give()">+</button>
+     <button onclick="ari()">-</button>
+    <button onclick="omo()">*</button>
+    <button onclick="nnn()">/</button>
+    </div>
+</body>
+</html>
+<script>
+   let para1 =document.getElementById("kaka")
+ function give(){
+    let boo2 = (document.getElementById("kenn") .value);
+    let ba2 = (document.getElementById("yap") .value);
+    console.log((Number(boo2)) + (Number(ba2)))
+    para1.innerHTML = ((Number(boo2)) + (Number(ba2)))
+ }
+ function ari(){
+    let boo3 = (document.getElementById("kenn") .value)
+    let ba3 = (document.getElementById("yap") .value)
+    console.log((Number(boo3)) - (Number(ba3)))
+   para1.innerHTML = ((Number(boo3)) - (Number(ba3)))
+ }
+ function omo(){
+    let boo4 = (document.getElementById("kenn") .value)
+    let ba4 = (document.getElementById("yap") .value)
+    console.log((Number(boo4)) * (Number(ba4)))
+    para1.innerHTML = ((Number(boo4)) + (Number(ba4)))
+    
+ }
+ function nnn(){
+    let boo5 = (document.getElementById("kenn") .value)
+    let ba5 = (document.getElementById("yap") .value)
+    console.log((Number(boo5)) / (Number(ba5)))
+   para1.innerHTML = ((Number(boo5)) / (Number(ba5)))
+ }
+</script>
